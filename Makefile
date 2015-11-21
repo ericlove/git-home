@@ -1,4 +1,4 @@
-TARGETS := 
+TARGETS := .vimrc .vim .tmux.conf
 
 .PHONY: check-arch
 
@@ -6,10 +6,10 @@ home: check-env $(addprefix $(HOME)/, $(TARGETS))
 	$(MAKE) -C arch
 
 $(HOME)/%: common/%
-	cp -r $< $@
+	ln -Fs $(PWD)/$< $@
 
 clean:
-	rm -rf $(TARGETS)
+	rm -rf $(addprefix $(HOME)/, $(TARGETS))
 	$(MAKE) -C arch clean
 
 check-env:

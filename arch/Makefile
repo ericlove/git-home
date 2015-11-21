@@ -5,7 +5,7 @@ ARCH-TARGETS := .bash_profile bin
 home: check-env $(addprefix $(HOME)/, $(ARCH-TARGETS))
 
 $(HOME)/%: $(ARCH)/%
-	cp -r $< $@
+	ln -s $(PWD)/$< $@
 
 clean:
 	rm -rf $(addprefix $(HOME)/, $(ARCH-TARGETS))
