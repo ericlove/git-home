@@ -2,6 +2,8 @@ TARGETS := .vimrc .vim .tmux.conf
 
 .PHONY: check-arch
 
+export GIT_HOME = $(PWD)
+
 home: check-env $(addprefix $(HOME)/, $(TARGETS)) 
 	$(MAKE) -C arch
 

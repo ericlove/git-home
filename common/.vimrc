@@ -1,4 +1,4 @@
-colorscheme koehler
+colorscheme default
 
 set nocompatible "Not vi compativle (Vim is king)
 
