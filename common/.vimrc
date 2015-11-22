@@ -2,6 +2,9 @@ colorscheme default
 
 set nocompatible "Not vi compativle (Vim is king)
 
+set laststatus=2
+set ruler
+
 """"""""""""""""""""""""""""""""""
 " Syntax and indent
 """"""""""""""""""""""""""""""""""
