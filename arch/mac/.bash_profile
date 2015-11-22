@@ -1,3 +1,3 @@
-#!/bin/bash
-
-export PATH=$HOME/bin:$PATH
+alias uno="git status -uno"
+alias gdb="lldb"
+export PATH=~/bin/:~/local/bin:$PATH
