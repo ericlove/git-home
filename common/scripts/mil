@@ -1,0 +1,2 @@
+#!/bin/bash
+mosh ericlove@$1.millennium.berkeley.edu
