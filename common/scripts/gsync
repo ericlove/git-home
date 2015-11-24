@@ -1,9 +1,11 @@
 #!/bin/bash
 
-set st = `git status --porcelain`
-if [ -n "$st" ] ; then
-    echo "Please commit uncommitted state first:"; \
+set -e
+st=`git status --porcelain`
+if [ -n "$st" ]; then
+    echo "Please commit uncommitted state first:"
     git status
+    exit 1
 fi
 
 git checkout master &&
