@@ -1,0 +1,72 @@
+#!/bin/bash
+
+TOP=$PWD
+
+if [ ! $BUSYBOX ]; then
+  echo "No path to busybox binary found; please set \$BUSYBOX."
+  exit -1
+fi
+
+SIZE=64
+MNT=mnt
+IMG=root.bin
+
+while getopts ":s:m:i:" opt; do
+  case $opt in 
+    s)
+      echo Setting size to $OPTARG
+      SIZE=$OPTARG
+      ;;
+    m)
+      echo Setting mount point to $OPTARG
+      MNT=$OPTARG
+      ;;
+    i)
+      echo Setting image file to $OPTARG
+      IMG=$OPTARG
+      ;;
+    \?)
+      echo Unknown argument $opt
+      exit 1
+      ;;
+  esac
+done
+
+function mount_image {
+  if [ ! -d $TOP/$MNT ]; then
+    mkdir $TOP/$MNT
+  fi
+  fuseext2 -o rw+ $TOP/$IMG $TOP/$MNT
+}
+
+function make_image {
+  dd if=/dev/zero of=$TOP/$IMG bs=1M count=$SIZE
+  mkfs.ext2 -F $TOP/$IMG
+  mount_image
+  cd $TOP/$MNT
+  mkdir -p bin etc dev lib proc sbin sys tmp usr usr/bin usr/lib usr/sbin
+  curl -L http://riscv.org/install-guides/linux-inittab > etc/inittab
+  ln -s ../bin/busybox sbin/init
+}
+
+function copy_busybox {
+  cp $BUSYBOX/busybox $TOP/$MNT/bin
+  cd $TOP
+}
+
+function unmount_img {
+  cd $TOP
+  fusermount -u $TOP/$MNT;
+}
+
+if [ ! -e $TOP/$IMG ]; then
+  make_image
+else
+  mount_image
+fi
+
+copy_busybox
+unmount_img
+
+
+
