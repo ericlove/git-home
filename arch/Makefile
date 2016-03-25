@@ -1,4 +1,4 @@
-ARCH-TARGETS := .bash_profile bin
+ARCH-TARGETS := .bash_profile bin .Xmodmap .Xresources .xinitrc
 
 ARCH-DIR := $(GIT_HOME)/arch
 
