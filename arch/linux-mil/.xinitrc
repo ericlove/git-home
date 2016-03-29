@@ -22,5 +22,6 @@ mkdir -p ~/.local/log/mhng-notify/
 
 # The window manager needs to run first, and I pretty much always want
 # to run this window manager.
+xscreensaver &
 exec /usr/bin/awesome
 
