@@ -9,3 +9,6 @@ export PATH="/opt/local/bin:/opt/local/sbin:$PATH"
 export PATH="/usr/local/texlive/2014/bin/x86_64-darwin:$PATH"
 
 export PATH="~/scripts:$PATH"
+
+# added by Anaconda2 4.1.1 installer
+export PATH="~/anaconda/bin:$PATH"
