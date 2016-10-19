@@ -1,4 +1,4 @@
-TARGETS := .vimrc .vim .tmux.conf .aspell.en.pws scripts .bashrc
+TARGETS := .vimrc .vim .tmux.conf .aspell.en.pws scripts .bashrc .common_profile.sh
 
 .PHONY: check-arch
 
