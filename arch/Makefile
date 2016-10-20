@@ -1,4 +1,4 @@
-ARCH-TARGETS := .bash_profile bin
+ARCH-TARGETS := .bash_profile bin .local_profile.sh
 
 ARCH-DIR := $(GIT_HOME)/arch
 

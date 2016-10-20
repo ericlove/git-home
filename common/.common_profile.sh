@@ -4,3 +4,4 @@ alias gst='git status'
 alias gdf='git diff'
 
 export VISUAL=vim
+source ~/.local_profile.sh
