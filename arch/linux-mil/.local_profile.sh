@@ -7,7 +7,7 @@ fi
 
 echo EXCUTED LOCAL PROFILE
 
-function set_path () {
+function linmil_set_path () {
   # Always start setting LOCAL_PATH with this line
   LOCAL_PATH=$SCRATCH_HOME/install/bin
 
@@ -32,10 +32,10 @@ function cds () {
 
 function use_riscv () {
   export RISCV_PATH=$SCRATCH_HOME/riscv
-  set_path;
+  linmil_set_path;
 }
 
 function no_riscv () {
   unset RISCV_PATH
-  set_path;
+  linmil_set_path;
 }
