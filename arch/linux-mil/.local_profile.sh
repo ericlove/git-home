@@ -5,8 +5,6 @@ if [ -z "$LINMIL_ORIG_PATH" ]; then
   export LINMIL_ORIG_PATH=$PATH
 fi
 
-echo EXCUTED LOCAL PROFILE
-
 function linmil_set_path () {
   # Always start setting LOCAL_PATH with this line
   LOCAL_PATH=$SCRATCH_HOME/install/bin
