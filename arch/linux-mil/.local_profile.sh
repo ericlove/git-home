@@ -9,8 +9,8 @@ function linmil_set_path () {
   # Always start setting LOCAL_PATH with this line
   LOCAL_PATH=$SCRATCH_HOME/install/bin
 
-  if [ -n "$RISCV_PATH" ]; then
-    LOCAL_PATH=$RISCV_PATH/bin:$LOCAL_PATH
+  if [ -n "$RISCV" ]; then
+    LOCAL_PATH=$RISCV/bin:$LOCAL_PATH
   fi
 
   if [ -z "$LINMIL_ORIG_PATH" ]; then
@@ -29,11 +29,11 @@ function cds () {
 }
 
 function use_riscv () {
-  export RISCV_PATH=$SCRATCH_HOME/riscv
+  export RISCV=$SCRATCH_HOME/install/riscv
   linmil_set_path;
 }
 
 function no_riscv () {
-  unset RISCV_PATH
+  unset RISCV
   linmil_set_path;
 }
