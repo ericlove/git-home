@@ -1,5 +1,9 @@
 export SCRATCH_HOME=/scratch/ericlove
 
+export AGENT_PATH=$SCRATCH_HOME/agent.sh
+
+ssh_add_or_start;
+
 # Only save original PATH value once per shell session
 if [ -z "$LINMIL_ORIG_PATH" ]; then
   export LINMIL_ORIG_PATH=$PATH
