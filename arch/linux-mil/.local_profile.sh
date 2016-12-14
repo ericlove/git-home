@@ -20,6 +20,8 @@ function linmil_set_path () {
   fi
 }
 
+linmil_set_path;
+
 export CPATH=$SCRATCH_HOME/install/include
 
 export LD_LIBRARY_PATH=$SCRATCH_HOME/install/lib:$SCRATCH_HOME/install/lib64
