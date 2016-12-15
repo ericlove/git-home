@@ -3,7 +3,8 @@ alias glg='git log'
 alias gst='git status'
 alias gdf='git diff'
 alias gbr='git branch'
-alias gcomm='git commit'
+alias gcm='git commit'
+alias gad='git add'
 
 export VISUAL=vim
 
