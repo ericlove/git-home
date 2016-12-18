@@ -1,8 +1,0 @@
-let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =6
-let g:netrw_dirhist_1='/scratch/ejl/ressort/code/src/main/scala'
-let g:netrw_dirhist_2='/nscratch/ericlove/k2/ressort/code/tmp/build.b12f6279-e0a1-4ad4-b939-25dcff603e3a'
-let g:netrw_dirhist_3='/nscratch/ericlove/k2/ressort/code/src/main/scala/compiler/frontend/codegen'
-let g:netrw_dirhist_4='/nscratch/ericlove/ressort/code/tmp/build.2beee715-6905-4d09-8ae4-0dfe38661574'
-let g:netrw_dirhist_5='/scratch/ericlove/ressort/code/src/main/scala/compiler/frontend'
-let g:netrw_dirhist_6='/scratch/ericlove/ressort/code/src/main/scala/compiler/backend'
