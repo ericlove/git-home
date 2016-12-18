@@ -27,3 +27,9 @@ function set_mac_path () {
 }
 
 set_mac_path
+
+export LD_LIBRARY_PATH="~/install/lib"
+
+function rgrep () {
+  grep --color -r $1 .
+}
