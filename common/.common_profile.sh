@@ -5,6 +5,7 @@ alias gdf='git diff'
 alias gbr='git branch'
 alias gcm='git commit'
 alias gad='git add'
+alias gg='git grep'
 
 export VISUAL=vim
 
