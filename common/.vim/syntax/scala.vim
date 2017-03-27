@@ -150,3 +150,5 @@ let b:current_syntax = "scala"
 " hi scalaValName gui=underline
 " hi scalaVarName gui=underline
 
+highlight OverLength ctermbg=red ctermfg=white guibg=#592929
+match OverLength /\%91v.\+/
