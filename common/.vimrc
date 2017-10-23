@@ -46,3 +46,5 @@ set number
 highlight OverLength ctermbg=red ctermfg=white guibg=#592929
 match OverLength /\%81v.\+/
 
+" Python-specific tabstop settings
+autocmd Filetype python setlocal expandtab tabstop=4 shiftwidth=4 softtabstop=4
