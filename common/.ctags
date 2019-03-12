@@ -1,8 +1,6 @@
-# Basic Options
 --recurse=yes
 --tag-relative=yes
 
-# Exclusions
 --exclude=target
 --exclude=.git
 --exclude=.svn
@@ -15,7 +13,6 @@
 --exclude=*.bak
 --exclude=*.tar.*
 
-# Options for Scala
 --langdef=scala
 --langmap=scala:.scala
 --regex-scala=/^[ \t]*((abstract|final|sealed|implicit|lazy)[ \t]*)*(private[^ ]*|protected)?[ \t]*class[ \t]+([a-zA-Z0-9_]+)/\4/c,classes/

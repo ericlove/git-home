@@ -9,6 +9,7 @@ set ruler
 
 " Ctags stufff
 set tags=tags;/
+map <C-F12> :!ctags -R -f ./.git/tags .<CR>
 
 """"""""""""""""""""""""""""""""""
 " Syntax and indent
