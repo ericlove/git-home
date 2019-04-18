@@ -32,7 +32,7 @@ export CPATH=$SCRATCH_HOME/install/include
 
 export LD_LIBRARY_PATH=$SCRATCH_HOME/install/lib:$SCRATCH_HOME/install/lib64
 
-export PYTHONPATH=$SCRATCH_HOME/install/lib/python2.7/site-packages
+export PYTHONPATH=$SCRATCH_HOME/install/lib/python3.4/site-packages
 
 function cds () {
   cd $SCRATCH_HOME;
