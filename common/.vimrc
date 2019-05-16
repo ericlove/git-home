@@ -1,14 +1,19 @@
 colorscheme zellner
+syntax on " Turn on syntax highligthing
+autocmd BufEnter * :syntax sync fromstart
 
 set nocompatible "Not vi compativle (Vim is king)
 
 set laststatus=2
 set ruler
 
+" Ctags stufff
+set tags=tags;/
+map <C-F12> :!ctags -R -f ./.git/tags .<CR>
+
 """"""""""""""""""""""""""""""""""
 " Syntax and indent
 """"""""""""""""""""""""""""""""""
-syntax on " Turn on syntax highligthing
 set showmatch  "Show matching bracets when text indicator is over them 
 
 " Switch on filetype detection and loads 

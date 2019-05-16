@@ -1,3 +1,4 @@
+alias gvim='/Applications/MacVim.app/Contents/bin/gvim'
 
 if [ -z "$MAC_ORIG_PATH" ]; then
   export MAC_ORIG_PATH=$PATH

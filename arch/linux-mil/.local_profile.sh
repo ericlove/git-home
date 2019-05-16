@@ -2,6 +2,8 @@ export SCRATCH_HOME=/scratch/ericlove
 
 export AGENT_PATH=$SCRATCH_HOME/agent.sh
 
+alias sbt='sbt -sbt-dir $LOCAL/.sbt -sbt-boot $SCRATCH_HOME/.sbt/boot -ivy $SCRATCH_HOME/.ivy2'
+
 ssh_add_or_start;
 
 # Only save original PATH value once per shell session
@@ -30,7 +32,7 @@ export CPATH=$SCRATCH_HOME/install/include
 
 export LD_LIBRARY_PATH=$SCRATCH_HOME/install/lib:$SCRATCH_HOME/install/lib64
 
-export PYTHONPATH=$SCRATCH_HOME/install/lib/python2.7/site-packages
+export PYTHONPATH=$SCRATCH_HOME/install/lib/python3.4/site-packages
 
 function cds () {
   cd $SCRATCH_HOME;
